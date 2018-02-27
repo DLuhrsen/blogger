@@ -9,6 +9,23 @@
   </head>
 
   <body>
+  	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <%= link_to "Articles", articles_path %>
+  <%= link_to 'Authors', authors_path %>
+  <%= link_to 'Tags', tags_path %>
+</div>
+  	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
   	<p class="flash"><%= flash.notice %></p>
   	<div id="container">
   		<div id="content">
